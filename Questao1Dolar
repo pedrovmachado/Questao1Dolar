@@ -1,0 +1,32 @@
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Cotação do dólar
+        double cotacaoDolar = 4.89;
+
+        System.out.println("Bem-vindo ao Conversor Dólar-Real!");
+        System.out.print("Digite o valor que deseja converter: ");
+        double valor = scanner.nextDouble();
+
+        System.out.println("Escolha a opção desejada:");
+        System.out.println("1 - Converter de dólar para real");
+        System.out.println("2 - Converter de real para dólar");
+        int opcao = scanner.nextInt();
+
+        double resultado;
+
+        switch (opcao) {
+            case 1:
+                resultado = valor * cotacaoDolar;
+                System.out.println("Resultado: " + valor + " dólar(es) = " + resultado + " reais");
+                break;
+            case 2:
+                resultado = valor / cotacaoDolar;
+                System.out.println("Resultado: " + valor + " real(is) = " + resultado + " dólar(es)");
+                break;
+            default:
+                System.out.println("Opção inválida. Por favor, escolha 1 ou 2.");
+        }
+
+        scanner.close();
+    
